@@ -1,6 +1,6 @@
 # How Angular Universal (SSR) treats runtime errors
 
-This project checks how `ngExpressEngine` from `@nguniversal/express-engine` exposes the errors from an angular SSR app to the ExpressJS. In particular, it checks, if any uncaught exception during the SSR of the Angular app causes sending a 500 response to the client. Technically speaking, it checks what are the values of arguments (`err` and `html`) passed from `ngExpressEngine` to `callback(err, html)` (the rendering callback of ExpressJS).
+This project checks how `ngExpressEngine` from `@nguniversal/express-engine` exposes the errors from an angular SSR app to the ExpressJS. In particular, this project checks, if any uncaught exception during the SSR of the Angular app causes sending a `500` status response to the client. Technically speaking, the project checks what are the values of arguments (`err` and `html`) passed from `ngExpressEngine` to `callback(err, html)` (the rendering callback of ExpressJS).
 
 ### Observations
 Rejected promise passed to the `APP_INITIALIZER` causes sending `500` status response to the client, with a HTML being only the printed stacktrace of the error. 
