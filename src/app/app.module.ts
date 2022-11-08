@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    RouterModule.forRoot([{ path: '', component: ChildComponent }]),
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' })
