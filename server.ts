@@ -21,7 +21,7 @@ export function customNgExpressEngine(
 ) => void {
   const expressEngine = ngExpressEngine(setupOptions);
   return (filePath, options, callback) => {
-    console.log('customNgExpressEngine req.url:', options.req.url);
+    console.log('customNgExpressEngine start rendering URL:', options.req.url);
     return expressEngine(filePath, options, (err, html) => {
       console.log('customNgExpressEngine result:', { err, html });
 
