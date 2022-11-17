@@ -12,7 +12,7 @@ This project checks how `ngExpressEngine` from `@nguniversal/express-engine` exp
 ### Conclusions
 - Beware that, by default any promise rejection in `APP_INITIALIZER` in your SSR app will result in **sending the rejection error stacktrace** to the client with status `500`. 
 
-- Beware that, by default any http errors from the backend endpoints or runtime errors in your SSR app, will result in a fake "success" - sending the response status `200` with the rendered page to the client. Please note, that the output HTML may be malformed, because of those runtime errors. The http errors from backend endpoints may result in not getting the crucial data to be displayed in final HTML output. Because of sending status code `200`, such an malformed HTML msy be eventually indexed by Google, harming your SEO.
+- Beware that, by default any http errors from the backend endpoints or runtime errors in your SSR app, will result in a fake "success" - sending the response status `200` with the rendered page to the client. Please note, that the output HTML may be malformed, because of those runtime errors. The http errors from backend endpoints may result in not getting the crucial data to be displayed in final HTML output. Because of sending status code `200`, such an malformed HTML may be eventually indexed by Google, harming your SEO.
 
 ## Install dependencies
 ```
