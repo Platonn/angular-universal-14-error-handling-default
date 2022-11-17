@@ -58,4 +58,4 @@ customNgExpressEngine result: {
 }
 ```
 
-In case of errors in `APP_INITIALIZER`, the `err` property will be present. In other cases, the `err` property will be `null`, but `html` will be present.
+In case of errors in `APP_INITIALIZER`, you will observe the `err` property will be present. In other cases, you will ovserve the `err` property will be `null`, but `html` will be present.
